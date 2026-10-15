@@ -1,0 +1,3 @@
+# Data Harvest EasySense Q5 (FTDI FT232B with a custom product ID)
+ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="0403", ATTR{idProduct}=="fe5c", RUN+="/usr/local/lib/easysense-q5/bind-driver"
+ACTION=="add", SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="fe5c", GROUP="dialout", MODE="0660", SYMLINK+="easysense-q5"

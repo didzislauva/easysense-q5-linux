@@ -1,0 +1,8 @@
+#!/bin/sh
+set -eu
+
+modprobe ftdi_sio
+NEW_ID=/sys/bus/usb-serial/drivers/ftdi_sio/new_id
+if [ -e "$NEW_ID" ]; then
+    printf '0403 fe5c\n' >"$NEW_ID" 2>/dev/null || true
+fi

@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "easysense-q5"
+version = "0.1.0"
+description = "Native Linux reader for the Data Harvest EasySense Q5"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "EasySense Q5 Linux contributors" }]
+keywords = ["easysense", "q5", "data-logger", "sensor", "serial"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Scientific/Engineering",
+]
+dependencies = []
+
+[project.scripts]
+easysense-q5 = "q5_reader:main"
+easysense-q5-descriptors = "q5_descriptors:main"
+
+[tool.setuptools]
+py-modules = ["q5_reader", "q5_descriptors"]
+
+[tool.setuptools.data-files]
+"share/easysense-q5" = ["q5_descriptors.json"]

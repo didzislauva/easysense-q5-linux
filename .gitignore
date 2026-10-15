@@ -1,0 +1,24 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.venv/
+venv/
+
+# Local captures and output
+*.csv
+*.log
+
+# Reverse-engineering/development artifacts; vendor software is not distributed
+.tools/
+downloads/
+installer/
+wineprefix/
+
+# Editor and OS files
+.idea/
+.vscode/
+*~
+.DS_Store
