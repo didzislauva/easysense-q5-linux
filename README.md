@@ -40,7 +40,7 @@ The reader itself has no third-party Python dependencies.
 Clone the repository and run the one-time Linux setup:
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/easysense-q5-linux.git
+git clone https://github.com/didzislauva/easysense-q5-linux.git
 cd easysense-q5-linux
 sudo ./scripts/setup-linux.sh
 ```
